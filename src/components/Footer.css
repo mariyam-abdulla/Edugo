@@ -1,0 +1,106 @@
+.footer {
+  background: #1A237E;
+  color: white;
+  padding: 60px 7% 20px;
+  margin-top: 70px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* LOGO SECTION */
+
+.footer-text {
+  font-size: 14px;
+  color: #dfe3f3;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* COLUMN HEADINGS */
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #B0BEC5;
+  font-weight: 600;
+}
+
+/* LINKS */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #dfe3f3;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #90CAF9;
+  margin-left: 4px;
+}
+
+/* NEWSLETTER INPUT */
+.footer-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-input input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.footer-input button {
+  padding: 10px 16px;
+  border: none;
+  background: #3949AB;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: 0.3s;
+}
+
+.footer-input button:hover {
+  opacity: 0.85;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  color: #cdd2ea;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-input input {
+    width: 60%;
+  }
+}

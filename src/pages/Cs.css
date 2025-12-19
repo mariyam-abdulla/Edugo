@@ -1,0 +1,202 @@
+/* =========================================================
+   MAIN PAGE WRAPPER
+========================================================= */
+.cs-page {
+  width: 100%;
+  background: #f7f9fc;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.cs-header {
+  background: linear-gradient(135deg, #3949ab, #1a237e);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 0 0 40px 40px;
+}
+
+.cs-header h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.cs-header p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SECTION CARDS
+========================================================= */
+.cs-section {
+  padding: 60px 8%;
+  background: #fff;
+  margin: 40px 8%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.cs-section h2 {
+  font-size: 30px;
+  margin-bottom: 18px;
+  color: #1a237e;
+}
+
+.cs-list li {
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* =========================================================
+   IMAGE SECTION
+========================================================= */
+.cs-img-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 8%;
+  background: #f0f4ff;
+  border-radius: 20px;
+  margin: 40px 8%;
+}
+
+.section-img {
+  width: 100%;
+  max-width: 700px; /* bigger image */
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.img-content h2 {
+  color: #1a237e;
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.img-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+.cs-contact-new {
+  width: 90%;
+  max-width: 900px;
+  margin: 60px auto 140px auto;
+  background: linear-gradient(145deg, #e3e9f7, #ffffff);
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.cs-contact-new:hover {
+  transform: translateY(-5px);
+}
+
+.cs-contact-new h2 {
+  font-size: 30px;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.cs-contact-row {
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.cs-contact-btn {
+  margin-top: 18px;
+  padding: 12px 28px;
+  background: #1a237e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.3s ease;
+}
+
+.cs-contact-btn:hover {
+  background: #0d155c;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+@media (max-width: 880px) {
+  .cs-img-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-img {
+    height: auto;
+    aspect-ratio: 16/10;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .cs-header h1 {
+    font-size: 32px;
+  }
+
+  .cs-header p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-img-card {
+    padding: 30px 5%;
+  }
+
+  .cs-contact-new {
+    padding: 30px 20px;
+  }
+
+  .cs-contact-btn {
+    padding: 12px 26px;
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   OPTIONAL PAGE ANIMATION (fade-slide)
+========================================================= */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

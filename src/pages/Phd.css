@@ -1,0 +1,231 @@
+/* ------------------------------
+   PAGE CONTAINER
+------------------------------ */
+.course-page {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  padding-bottom: 50px;
+  background: #f5f7fa;
+
+  /* Smooth page load animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* ------------------------------
+   MODERN HEADER
+------------------------------ */
+.course-header-new {
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+
+  /* Header animation */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s forwards 0.3s;
+}
+
+.course-header-new h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.course-header-new p {
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* ------------------------------
+   GENERAL SECTIONS
+------------------------------ */
+.course-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  /* Section animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.course-section h2 {
+  font-size: 28px;
+  color: #1a237e;
+  margin-bottom: 12px;
+}
+
+.course-section p,
+.course-section ul {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.course-section ul {
+  padding-left: 20px;
+}
+
+.course-section ul li {
+  margin-bottom: 6px;
+}
+
+/* ------------------------------
+   LAB IMAGE
+------------------------------ */
+.course-labs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+
+  /* Smooth fade-in */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.7s;
+}
+
+.course-labs img {
+  width: 70%;
+  max-width: 450px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+
+  /* Smooth hover effect */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.course-labs img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* ------------------------------
+   CONTACT SECTION — Civil-Style Card
+------------------------------ */
+.dept-card {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  background: linear-gradient(145deg, #e3e9f7, #ffffff);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Fade-in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.9s;
+}
+
+.dept-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.dept-card h2 {
+  font-size: 28px;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.dept-card .contact-details p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+  margin-top: 18px;
+  padding: 12px 28px;
+  background: #1a237e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #0d155c;
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+  .course-labs img,
+  .dept-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-header-new {
+    padding: 50px 15px;
+  }
+
+  .course-header-new h1 {
+    font-size: 26px;
+  }
+
+  .course-header-new p {
+    font-size: 14px;
+  }
+
+  .course-section {
+    padding: 20px 15px;
+  }
+
+  .dept-card {
+    padding: 25px;
+  }
+}
+
+/* ------------------------------
+   KEYFRAME ANIMATIONS
+------------------------------ */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

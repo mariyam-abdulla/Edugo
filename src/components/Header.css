@@ -1,0 +1,238 @@
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: visible;
+  background: #f7f9fc;
+  padding-bottom: 160px; /* space for cards */
+}
+
+/* BACKGROUND SLIDER */
+.hero-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.hero-arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-arrow.left { left: 20px; }
+.hero-arrow.right { right: 20px; }
+
+/* HERO CONTENT */
+.hero-content {
+  position: absolute;
+  top: 18%;
+  left: 7%;
+  z-index: 10;
+  color: #fff; /* desktop font color */
+  max-width: 550px;
+}
+
+.hero-small-title {
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #FFEB3B; /* yellow as in desktop */
+  font-weight: 600;
+}
+
+.hero-big-title {
+  font-size: 55px;
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 1.2;
+  color: #fff; /* keep same as desktop */
+}
+
+.hero-text {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 25px;
+  color: #fff; /* keep same as desktop */
+}
+
+/* BUTTON */
+.hero-btn {
+  background: #1A237E; /* same desktop color */
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  z-index: 20;
+}
+
+.hero-btn:hover {
+  background: #3949AB;
+}
+
+/* FLOATING CARDS */
+.hero-overlay-cards {
+  position: absolute;
+  bottom: -85px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  z-index: 30;
+  flex-wrap: wrap;
+}
+
+.hero-overlay-card {
+  background: #fff;
+  width: 320px;
+  padding: 32px 28px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+  border: 1px solid #eef1f6;
+  transition: 0.3s;
+}
+
+.hero-overlay-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+}
+
+.icon-wrap {
+  height: 70px;
+  width: 70px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.icon-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay-card h3 {
+  color: #1A237E; /* same as desktop */
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.hero-overlay-card p {
+  color: #555; /* same as desktop */
+  font-size: 15px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.hero-overlay-card a {
+  color: #1A237E; /* same as desktop */
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-overlay-card a:hover {
+  color: #3949AB;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero-big-title { font-size: 45px; }
+  .hero-text { font-size: 16px; }
+  .hero-content { top: 15%; left: 5%; max-width: 500px; }
+}
+
+/* Mobile Landscape / Small tablets */
+@media (max-width: 768px) {
+  .hero-big-title { font-size: 38px; }
+  .hero-content { top: 12%; left: 5%; max-width: 90%; }
+  .hero-btn { font-size: 16px; padding: 10px 22px; }
+  .hero-overlay-card { width: 80%; }
+  .hero-overlay-cards { bottom: -50px; gap: 20px; }
+}
+
+/* Mobile Portrait — stacked layout */
+@media (max-width: 600px) {
+  .hero-section { height: auto; padding-bottom: 250px; }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 100%;
+    padding: 20px 5%;
+    color: #fff; /* keep desktop font color */
+  }
+
+  .hero-big-title { font-size: 30px; }
+  .hero-text { font-size: 15px; margin-bottom: 15px; }
+
+  /* Button below hero text */
+  .hero-btn {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white; /* same as desktop */
+  }
+
+  /* Cards below button */
+  .hero-overlay-cards {
+    position: relative;
+    bottom: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .hero-overlay-card { width: 90%; }
+}
+
+/* Extra small phones */
+@media (max-width: 420px) {
+  .hero-big-title { font-size: 26px; }
+  .hero-btn { padding: 9px 18px; font-size: 15px; color: white; }
+  .hero-content { padding: 15px 5%; }
+}
